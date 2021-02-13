@@ -12,15 +12,14 @@
 int main(void)
 {
 	int n;
-	
 	while (n < 10)
 	{
 		if (n / 10 >= 0)
-		printf("%d",n);
+		printf("%d", n);
 
 		n++;
 	}
-	putchar('\n');
-	
+	printf("\n");
 	return (0);
+
 }
