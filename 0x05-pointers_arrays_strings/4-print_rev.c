@@ -11,25 +11,19 @@
  *
  */
 
-int _len(char *c)
-{
-	int num = 0;
-
-	while (*(c + num) != '\0')
-		num++;
-
-	return (num);
-}
-
 void print_rev(char *s)
 {
-	int len, n;
+	int num = 0;
+	int n;
+	char *c = s;
 
-	len = _len(s);
+	while (*(s + num) != '\0')
+		num++;
 
-	for (n = len; n >= 0; n--)
+	for (n = num; n >= 0; n--)
 	{
-		_putchar(*(s + n));
+		_putchar(*(c + n));
 	}
 	_putchar('\n');
+
 }
