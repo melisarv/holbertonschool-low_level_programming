@@ -3,9 +3,9 @@
 /**
  * _strcpy - entry point
  * Description: function that copies the string pointed to the buffer pointed
- * @*dest: destination pointer
- * @*src: initial pointer to be copied
- * Return: pointer
+ * @dest: destination pointer
+ * @src: initial pointer to be copied
+ * Return: pointer copied
  */
 char *_strcpy(char *dest, char *src)
 {
