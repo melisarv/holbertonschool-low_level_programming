@@ -25,5 +25,7 @@ char *_strcat(char *dest, char *src)
 		lendest++;
 	}
 
+	dest[lendest] = '\0';
+
 	return (dest);
 }
