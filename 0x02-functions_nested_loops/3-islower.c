@@ -1,16 +1,17 @@
-#include <stdio.h>
-#include <ctype.h>
+#include "holberton.h"
+
 /**
- * main - function that checks for lowercase
- *
- * Return:0
- *
+ * _islower - function that checks for lowercase character
+ *@c: integer to be changed
+ * Return: integer result
  */
 
 int _islower(int c)
 {
-	int r;
-	r = islower(c);
+	int r = 0;
+
+	if (c >= 97 && c <= 122)
+		r = 1;
 
 	return (r);
 }

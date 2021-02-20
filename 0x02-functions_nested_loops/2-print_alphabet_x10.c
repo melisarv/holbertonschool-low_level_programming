@@ -1,15 +1,16 @@
 #include "holberton.h"
 
 /**
- * main - prints 10 times the alphabet in lowercase
+ * print_alphabet_x10 - prints 10 times the alphabet in lowercase
  *
- * Return:0
+ * Return: void
  */
 
 void print_alphabet_x10(void)
 {
 	char c;
 	int i = 0;
+
 	while (i < 10)
 	{
 		c = 'a';
