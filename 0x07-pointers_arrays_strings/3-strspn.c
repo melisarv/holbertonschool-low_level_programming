@@ -20,7 +20,7 @@ unsigned int _strspn(char *s, char *accept)
 			}
 		}
 
-		if ( i == numm)
+		if ( i == num)
 			break;
 	}
 
