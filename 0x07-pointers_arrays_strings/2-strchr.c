@@ -21,5 +21,5 @@ char *_strchr(char *s, char c)
 	if (v == 1)
 		return (s + i);
 	else
-		return (s = 0);
+		return ('\0');
 }
