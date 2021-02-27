@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	int i, cents = 0, money = 0, error = 0;
 	int coins[5] = {25, 10, 5, 2, 1};
 
-	if (argc > 1)
+	if (argc == 2)
 	{
 		money = atoi(argv[1]);
 
