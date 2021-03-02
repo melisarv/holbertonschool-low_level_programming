@@ -28,8 +28,10 @@ char *str_concat(char *s1, char *s2)
 	char *str;
 	int i = 0, cont1 = 0, cont2 = 0;
 
-	if (s1 == NULL || s2 == NULL)
-		return ("");
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
 	cont1 = _len(s1);
 	cont2 = _len(s2);
@@ -51,8 +53,6 @@ char *str_concat(char *s1, char *s2)
 		str[i + cont1] = s2[i];
 		i++;
 	}
-	
-	str[cont1 + cont2] = '\0';
 
 	return (str);
 }
