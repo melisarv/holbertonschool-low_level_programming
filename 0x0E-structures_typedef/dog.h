@@ -1,8 +1,6 @@
 #ifndef GRANDPARENT_H
 #define GRANDPARENT_H
 
-int _putchar(char c);
-
 /**
  * struct dog - data type dog
  * @name: dog's name
@@ -16,4 +14,8 @@ struct dog
 	float age;
 	char *owner;
 };
+
+int _putchar(char c);
+void init_dog(struct dog *d, char *name, float age, char *owner);
+
 #endif
