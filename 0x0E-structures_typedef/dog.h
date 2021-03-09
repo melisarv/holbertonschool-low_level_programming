@@ -1,5 +1,5 @@
-#ifndef DOG_H
-#define DOG_H
+#ifndef GRANDPARENT_H
+#define GRANDPARENT_H
 
 int _putchar(char c);
 
@@ -10,7 +10,8 @@ int _putchar(char c);
  * @owner: owner of the dog
  *
  */
-struct dog{
+struct dog
+{
 	char *name;
 	float age;
 	char *owner;
