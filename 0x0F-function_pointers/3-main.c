@@ -4,6 +4,8 @@
 
 /**
  * main - check the code
+ * @argc: number de argument
+ * @argv: array of argument
  * Return: result
  */
 int main(int argc, char *argv[])
@@ -15,7 +17,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-
+	
 	result = get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3]));
 
 	if (result == 0)
