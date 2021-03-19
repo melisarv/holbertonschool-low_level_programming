@@ -5,7 +5,7 @@
  * @s: the string
  * Return: size of the string
  */
-int _strlen(char *s)
+int _strlen(const char *s)
 {
 		int cont = 0;
 
@@ -23,19 +23,28 @@ int _strlen(char *s)
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-		char *newstr;
 		list_t *newnode, *lastnode;
 
 		newnode = malloc(sizeof(list_t));
 
 		if (newnode == NULL)
+		{
+			free(newnode);
 			return (NULL);
+		}
 
 		lastnode = *head;
-
-		newstr = strdup(str);
-		newnode->str = newstr;
-		newnode->len = _strlen(newstr);
+		if (str != NULL)
+		{	
+			newnode->str = strdup(str);
+			newnode->len = _strlen(str);
+		}
+		else
+		{
+			newnode->str = NULL;
+			newnode->len = 0;
+		}
+		
 		newnode->next = NULL;
 
 		if (*head == NULL)
