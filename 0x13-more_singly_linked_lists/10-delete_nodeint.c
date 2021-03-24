@@ -17,7 +17,7 @@ int pop_listint(listint_t **head)
 	n = (*head)->n;
 	free(*head);
 	*head = temp;
-	return (n);
+	return (1);
 }
 
 /**
@@ -33,8 +33,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	listint_t *temp = NULL;
 
 	if (index == 0)
-		return pop_listint(head);
-	
+		return (pop_listint(head));
+
 	while (i < index - 1)
 	{
 		if (firstnode->next == NULL)
