@@ -9,9 +9,8 @@
 
 int main(int argc, char **argv)
 {
-	int fd_from, fd_to, c_to, c_from;
+	int fd_from, fd_to, c_to, c_from, lenread, lenwrite;
 	char buf[1024];
-	long lenread, lenwrite;
 
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
