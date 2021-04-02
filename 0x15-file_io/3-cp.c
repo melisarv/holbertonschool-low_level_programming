@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 	lenread = 1024;
 	while (lenread == 1024)
 	{
-		lenread = read(fd_from, buf, 2014);
+		lenread = read(fd_from, buf, 1024);
 		if (lenread == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file from %s\n", argv[1]);
