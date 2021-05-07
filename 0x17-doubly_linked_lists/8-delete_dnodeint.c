@@ -12,10 +12,12 @@ int pop_dlistint(dlistint_t **head)
 	if (*head == NULL)
 		return (-1);
 
-	temp = (*head)->next;
+	temp = *head;
+	if ((*head)->next != NULL)
+		temp->next->prev = NULL;
 
-	free(*head);
-	*head = temp;
+	*head = temp->next;
+	free(temp);
 	return (1);
 }
 
@@ -30,8 +32,9 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	unsigned int i = 0;
 	dlistint_t *current = *head;
 
-	if (*head == NULL)
+	if (head == NULL && *head == NULL)
 		return (-1);
+
 	if (index == 0)
 		return (pop_dlistint(head));
 
