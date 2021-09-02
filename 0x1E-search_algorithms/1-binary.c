@@ -42,6 +42,7 @@ int binary_search(int *array, size_t size, int value)
 			else
 				return (mid);
 		}
+		_print(array, low, upp);
 	}
 	return (-1);
 }
